@@ -618,6 +618,7 @@ int main(int argc, char** argv) {
     CheckGet(db, roptions, "bar1", NULL);
     CheckGet(db, roptions, "bar2", NULL);
     CheckGet(db, roptions, "bar3", NULL);
+    rocksdb_slicetransform_destroy(prefix_extractor);
   }
 
   StartPhase("merge_operator");
